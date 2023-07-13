@@ -1,4 +1,4 @@
-import { packsReducer, packsThunks } from "features/packs/packs.slice";
+import { packsReducer, packsThunks } from "./packs.slice";
 
 describe("packsReducer", () => {
   const initialState = {

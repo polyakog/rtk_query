@@ -1,4 +1,4 @@
-import { appActions, appReducer } from "app/app.slice";
+import { appActions, appReducer } from "./app.slice";
 
 describe("appReducer", () => {
   const initialState = {

@@ -1,8 +1,8 @@
-import { authThunks } from "features/auth/auth.slice";
 import s from "features/auth/Register/styles.module.css";
-import { useActions } from "common/hooks";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { authThunks } from "../auth.slice";
+import { useActions } from "../../../common/hooks";
 
 export const Login = () => {
   const { login } = useActions(authThunks);
@@ -10,17 +10,17 @@ export const Login = () => {
 
   const loginHandler = () => {
     const payload = {
-      email: "safrondev1@gmail.com",
+      email: "gpolyakov77@gmail.com",
       password: "1qazxcvBG",
       rememberMe: false,
     };
     login(payload)
       .unwrap()
-      .then((res) => {
+      .then((res:any) => {
         toast.success("Вы успешно залогинились");
         navigate("/packs");
       })
-      .catch((err) => {
+      .catch((err:any) => {
         toast.error(err.e.response.data.error);
       });
   };

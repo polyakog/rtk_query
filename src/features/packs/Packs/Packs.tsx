@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { useActions, useAppSelector } from "common/hooks";
-import { packsThunks } from "features/packs/packs.slice";
+import { useActions, useAppSelector } from "../../../common/hooks";
 import s from "./styles.module.css";
-import { PackType } from "features/packs/packs.api";
-import { packsSelector } from "features/packs/packs.selector";
 import { useNavigate } from 'react-router-dom';
+import { packsSelector } from "../packs.selector";
+import { PackType } from "../packs.api";
+import { packsThunks } from "../packs.slice";
 
 export const Packs = () => {
   const cardPacks = useAppSelector(packsSelector);
