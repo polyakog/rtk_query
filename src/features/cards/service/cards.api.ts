@@ -1,5 +1,4 @@
 import { createApi, fetchBaseQuery, retry } from '@reduxjs/toolkit/query/react';
-import { baseURL } from 'common/api/common.api';
 import {
 	AddCardResponseType,
 	ArgCreateCardType, ArgDeleteCardType,
@@ -8,7 +7,8 @@ import {
 	DeleteCardResponseType,
 	TransformFetchCardsResponseType,
 	UpdateCardResponseType
-} from 'features/cards/service/cards.api.types';
+} from './cards.api.types';
+import { baseURL } from '../../../common/api/common.api';
 
 export const cardsApi = createApi({
 	reducerPath: 'cardsApi',

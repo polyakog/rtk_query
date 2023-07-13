@@ -4,8 +4,8 @@ import {
   ArgRegisterType,
   authApi,
   ProfileType,
-} from "features/auth/auth.api";
-import { createAppAsyncThunk, thunkTryCatch } from "common/utils";
+} from "./auth.api";
+import { createAppAsyncThunk, thunkTryCatch } from "../../common/utils";
 
 const slice = createSlice({
   name: "auth",

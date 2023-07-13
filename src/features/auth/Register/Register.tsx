@@ -1,9 +1,9 @@
-import { authThunks } from "features/auth/auth.slice";
-import s from "features/auth/Register/styles.module.css";
-import { useActions } from "common/hooks";
+import s from "./styles.module.css";
 import { useEffect } from "react";
-import { commonActions } from "common/actions/unhandle.action";
-import { appActions } from "app/app.slice";
+// import { commonActions } from "common/actions/unhandle.action";
+import { authThunks } from "../auth.slice";
+import { useActions } from "../../../common/hooks";
+import { commonActions } from "../../../common/actions/unhandle.action";
 
 export const Register = () => {
   // const { register } = useActions(authThunks);

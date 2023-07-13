@@ -1,18 +1,18 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { store } from 'app/store';
-import { App } from 'app/App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Register } from 'features/auth/Register/Register';
-import { Login } from 'features/auth/Login/Login';
-import { GlobalError } from 'common/components/GlobalError/GlobalError';
+import { Login } from './features/auth/Login/Login';
+import { GlobalError } from './common/components/GlobalError/GlobalError';
 import 'react-toastify/dist/ReactToastify.css';
-import { Packs } from 'features/packs/Packs/Packs';
-import { Counter } from 'features/counter/Counter';
-import { Cards } from 'features/cards/componets/Cards/Cards';
+import { Packs } from './features/packs/Packs/Packs';
+import { Counter } from './features/counter/Counter';
+import { Cards } from './features/cards/componets/Cards/Cards';
+import { store } from './app/store';
+import { App } from './app/App';
+import { Register } from './features/auth/Register/Register';
 
 const router = createBrowserRouter([
 	{

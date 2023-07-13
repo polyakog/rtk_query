@@ -9,7 +9,7 @@ import {
   selectCount,
 } from "./counterSlice";
 import styles from "./Counter.module.css";
-import { useAppDispatch, useAppSelector } from "common/hooks";
+import { useAppDispatch, useAppSelector } from "../../common/hooks";
 
 export function Counter() {
   const count = useAppSelector(selectCount);

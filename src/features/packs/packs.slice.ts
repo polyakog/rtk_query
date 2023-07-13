@@ -1,11 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { createAppAsyncThunk, thunkTryCatch } from "common/utils";
+import { createAppAsyncThunk, thunkTryCatch } from "../../common/utils";
 import {
   ArgCreatePackType,
   FetchPacksResponseType,
   packsApi,
   PackType,
-} from "features/packs/packs.api";
+} from "./packs.api";
+
 
 const fetchPacks = createAppAsyncThunk<
   { packsPage: FetchPacksResponseType },

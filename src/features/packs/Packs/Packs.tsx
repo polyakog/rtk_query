@@ -43,7 +43,7 @@ export const Packs = () => {
       <h1>Packs</h1>
       <button onClick={addPackHandler}>add pack</button>
       <div>
-        {cardPacks.map((p) => {
+        {cardPacks.map((p:any) => {
           return (
             <div key={p._id} className={s.container}>
               <p>

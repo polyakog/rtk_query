@@ -1,5 +1,5 @@
-import { authReducer, authThunks } from "features/auth/auth.slice";
-import { ProfileType } from "features/auth/auth.api";
+import { authReducer, authThunks } from "./auth.slice";
+
 
 describe("authReducer", () => {
   const initialState = {

@@ -1,4 +1,4 @@
-import s from "features/auth/Register/styles.module.css";
+import s from "../Register/styles.module.css";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { authThunks } from "../auth.slice";
