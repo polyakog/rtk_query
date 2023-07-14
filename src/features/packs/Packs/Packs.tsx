@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { useActions, useAppSelector } from "../../../common/hooks";
-import s from "./styles.module.css";
+// import s from "./styles.module.css";
 import { useNavigate } from 'react-router-dom';
 import { packsSelector } from "../packs.selector";
 import { PackType } from "../packs.api";
 import { packsThunks } from "../packs.slice";
+import React from "react";
 
 export const Packs = () => {
   const cardPacks = useAppSelector(packsSelector);
@@ -45,7 +46,9 @@ export const Packs = () => {
       <div>
         {cardPacks.map((p:any) => {
           return (
-            <div key={p._id} className={s.container}>
+            <div key={p._id} 
+            // className={s.container}
+            >
               <p>
                 <b>pack name</b>: {p.name}
               </p>

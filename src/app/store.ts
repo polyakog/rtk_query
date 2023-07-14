@@ -4,7 +4,8 @@ import { appReducer } from "./app.slice";
 import { authReducer } from "./../features/auth/auth.slice";
 import { packsReducer } from "./../features/packs/packs.slice";
 import { cardsApi } from './../features/cards/service/cards.api';
-import { setupListeners } from '@reduxjs/toolkit/query';
+import { setupListeners } from "@reduxjs/toolkit/dist/query";
+
 
 export const store = configureStore({
   reducer: {
@@ -12,11 +13,12 @@ export const store = configureStore({
     app: appReducer,
     auth: authReducer,
     packs: packsReducer,
-		[cardsApi.reducerPath]: cardsApi.reducer,
+    [cardsApi.reducerPath]: cardsApi.reducer,
+    
   },
-	// Добавляем middleware для использования дополнительных функций rtk-query, таких как кэширование, инвалидация и pooling.
-	middleware: (getDefaultMiddleware) =>
-		getDefaultMiddleware().concat(cardsApi.middleware),
+  // Добавляем middleware для использования дополнительных функций rtk-query, таких как кэширование, инвалидация и pooling.
+  middleware: (getDefaultMiddleware) =>
+  getDefaultMiddleware().concat(cardsApi.middleware),
 });
 
 // Метод setupListeners, подключает слушатели событий фокуса (refetchOnFocus) и повторного подключения (refetchOnReconnect ), чтобы автоматически перезагружать данные при возвращении на страницу или восстановлении подключения
