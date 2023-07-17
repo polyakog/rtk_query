@@ -1,10 +1,10 @@
-type CardType = {
+export type CardType = {
     _id: string
     cardPack_id: string
     user_id: string
     answer: string
     question: string
-    grade: number
+    grade: CardGradeType
     shots: number
     comments: string
     type: string
@@ -30,3 +30,23 @@ export type FetchCardsResponseType = {
     token: string;
     tokenDeathTime: number;
 };
+
+export type AddCardResponseType = {
+    newCard: CardType;
+    token: string;
+    tokenDeathTime: number;
+  };
+
+type CardGradeType = 0 | 1 | 2 | 3 | 4 | 5;
+
+export type ArgCreateCardType = {
+    cardsPack_id: string;
+    question?: string;
+    answer?: string;
+    grade?: CardGradeType;
+    shots?: number;
+    answerImg?: string;
+    questionImg?: string;
+    questionVideo?: string;
+    answerVideo?: string;
+  };
