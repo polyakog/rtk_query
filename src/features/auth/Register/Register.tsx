@@ -1,5 +1,5 @@
 import s from "./styles.module.css";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 // import { commonActions } from "common/actions/unhandle.action";
 import { authThunks } from "../auth.slice";
 import { useActions } from "../../../common/hooks";
@@ -20,8 +20,8 @@ export const Register = () => {
 
   const registerHandler = () => {
     const payload = {
-      email: "safrondev2@gmail.com",
-      password: "12345678",
+      email: "safrondev1@gmail.com",
+      password: "1qazxcvBG",
     };
     const res = register(payload).unwrap();
   };

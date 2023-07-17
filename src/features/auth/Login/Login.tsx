@@ -1,8 +1,9 @@
-import s from "../Register/styles.module.css";
+import s from "./styles.module.css";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { authThunks } from "../auth.slice";
 import { useActions } from "../../../common/hooks";
+import React from 'react'
 
 export const Login = () => {
   const { login } = useActions(authThunks);
@@ -10,7 +11,7 @@ export const Login = () => {
 
   const loginHandler = () => {
     const payload = {
-      email: "gpolyakov77@gmail.com",
+      email: "safrondev1@gmail.com",
       password: "1qazxcvBG",
       rememberMe: false,
     };
